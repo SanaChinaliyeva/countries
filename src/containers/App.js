@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import uuid from 'uuid';
 import './App.css';
 
 class App extends Component {
+    state = {
+        countries: []
+    }
   getCountriesList = () => {
+      let countries = [...this.state.countries];
     axios.get().then(response => {
       return Promise.all(response.data.map(country => {
-        console.log(country.name);
-        return country.name;
+        countries.push(country.name);
+          this.setState({countries});
       }));
-    }).then(posts => {
-      this.setState({posts});
     }).catch(error => {
       console.log(error);
     });
@@ -22,7 +25,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+            <div className="choicePanel">
+                {
+                    (this.state.countries).map (country => {
+                        return <h2 key={uuid()}>{country}</h2>
+                    })
+                }
+            </div>
       </div>
     );
   }
