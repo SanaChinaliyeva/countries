@@ -5,9 +5,18 @@
 
 .choicePanel {
   max-width: 25%;
-  border: 1px solid #ccc;
+  border: 5px solid #ccc;
   text-align: left;
   padding: 10px;
   max-height: 100vh;
   overflow-y: scroll;
+  text-decoration: underline;
+}
+
+.countryName {
+  margin: 0;
+  padding: 10px;
+}
+.countryName:hover {
+  background: #f9f59f;
 }
