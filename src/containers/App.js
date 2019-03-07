@@ -27,7 +27,6 @@ class App extends Component {
     }
 
     handleClick = (country) => {
-        console.log(country);
         this.setState({selectedCountry: country})
     };
 
