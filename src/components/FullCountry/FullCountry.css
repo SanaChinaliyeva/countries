@@ -6,6 +6,9 @@
     width: 75%;
     border: 5px solid #ccc;
     max-height: 100vh;
+    overflow-y: scroll;
+    background: #f7e6f5;
+    box-sizing: border-box;
 }
 
 .FullCountry img {
@@ -15,4 +18,5 @@
 
 .FullCountry_Desc {
     font-size: 20px;
+    max-width: 60%;
 }
